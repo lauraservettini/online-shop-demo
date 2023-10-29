@@ -1,0 +1,36 @@
+form hr {
+  border-color: var(--color-primary-200);
+  margin: var(--space-4);
+}
+
+label {
+  color: var(--color-gray-100);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+input,
+textarea {
+  font: inherit;
+  padding: var(--space-2);
+  border-radius: var(--border-radius-small);
+  border: none;
+  width: 90%;
+}
+
+#imgUploadControl {
+  display: flex;
+  align-items: center;
+}
+
+#imgUploadControl input {
+  max-width: 15rem;
+}
+
+#imgUploadControl img {
+  display: none;
+  width: 5.5rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: var(--border-radius-small);
+}

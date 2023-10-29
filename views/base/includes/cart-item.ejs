@@ -1,0 +1,17 @@
+<article class="cart-item">
+  <div class="cart-item-info">
+    <h2><%= item.product.title %></h2>
+    <p>€ <span class="total-item-price"> <%= item.totalPrice.toFixed(2) %></span> <span class="cart-product-price">(€ <%= item.product.price.toFixed(2) %>)</span></p>
+  </div>
+  <form class="cart-item-management">
+    <input 
+    type="number" 
+    value="<%= item.quantity %>" 
+    data-productid="<%= item.product._id %>"
+    data-_csrf="<%= locals.csrfToken %>"
+    min="0" 
+    step="1" 
+    required>
+    <button class="btn btn-alt">Update</button>
+  </form>  
+</article>

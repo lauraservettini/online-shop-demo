@@ -1,0 +1,45 @@
+h1 {
+  text-align: center;
+  color: var(--color-gray-300);
+}
+
+.nav-items form {
+  max-width: 25rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: none;
+  text-align: center;
+}
+
+form {
+  max-width: 25rem;
+  margin: var(--space-8) auto;
+  padding: var(--space-8);
+  background-color: var(--color-gray-600);
+  border-radius: var(--border-radius-medium);
+  text-align: center;
+}
+
+form a {
+  color: var(--color-primary-200);
+}
+
+form a:hover,
+form a:active {
+  color: var(--color-primary-400);
+}
+
+#pwd-line {
+  display: flex;
+  justify-content: center;
+}
+
+#password {
+  width: 80%;
+}
+
+#show-hide-pwd {
+  width: 10%;
+  cursor: pointer;
+}

@@ -1,0 +1,37 @@
+<%- include ('../../base/includes/head.ejs', {pageTitle: "All products"}) %>
+<link rel="stylesheet" href="/styles/cart.css">
+<script src="/scripts/update-cart-management.js" defer></script>
+</head>
+<body>
+<%- include ('../../base/includes/header.ejs') %>
+<main>
+    <h1>Your Cart</h1>
+    <ul id="cart-items">
+        <% for (const item of locals.cart.items) { %>
+            <li>
+                <%- include("../../base/includes/cart-item.ejs", {item: item}) %>
+            </li>
+        <% } %>
+    </ul>
+    <div id="cart-total">
+        <p>Total: € <span id="cart-total-price"><%= locals.cart.totalPrice.toFixed(2) %></span></p>
+
+        <% if( locals.isAuth && !(locals.cart.totalQuantity === 0) ) { %>
+            <form action="/orders" method="post">
+                <input type="hidden" name="CSRFToken" value="<%= locals.csrfToken %>">
+                <button class="btn">Buy Products</button>
+            </form>
+        <% } else if( locals.isAuth && (locals.cart.totalQuantity === 0) ){ %>
+            <div id="cart-login">
+                <p><a class="btn btn-alt" href="/">Go back</a> and add a product to the cart!</p>
+            </div>
+        <% } else { %>
+            <div id="cart-login">
+                <p><a class="btn btn-alt" href="/login">Login</a> to proceed with the order!</p>
+            </div>
+        <% } %>
+    </div>
+</main>
+<%- include ('../../base/includes/footer.ejs') %>
+</body>
+</html>

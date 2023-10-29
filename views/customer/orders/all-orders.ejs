@@ -1,0 +1,13 @@
+<%- include ('../../base/includes/head.ejs', {pageTitle: "All your orders"}) %>
+<link rel="stylesheet" href="/styles/order.css">
+</head>
+<body>
+<%- include ('../../base/includes/header.ejs') %>
+<main>
+    <h1>All Your Orders</h1>
+        <%- include ("../../base/includes/order-list.ejs", {orders: orders} ) %>
+          
+</main>
+<%- include ('../../base/includes/footer.ejs') %>
+</body>
+</html>
