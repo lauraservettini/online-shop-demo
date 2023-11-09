@@ -6,7 +6,9 @@ Il sito è stato costruito usando:
 - HTML
 - EJS template
 - CSS
+- Javascript
 - Node.JS
+- MVC Pattern
 - NPM
 - nodemon
 - express
